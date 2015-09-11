@@ -4,7 +4,7 @@ module "ssh_keys" {
 }
 
 resource "aws_instance" "web" {
-  count = 3
+  count = 5
   ami   = "${lookup(var.aws_amis, var.aws_region)}"
 
   instance_type = "t2.micro"
